@@ -1,0 +1,1629 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loubeyres Mathis - Plombier à Mimizan (40200)</title>
+<meta name="description" content="Loubeyres Mathis, plombier à Mimizan. Rénovation, fuites, chauffage. Réactif et professionnel. Appelez le +33675441829.">
+<meta name="keywords" content="plombier Mimizan, dépannage plomberie Mimizan, chauffagiste Mimizan, recherche de fuite Mimizan, débouchage canalisation Mimizan, installation chauffe-eau Mimizan, artisan plombier Landes">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #121212;
+    --secondary: #1E1E1E;
+    --background: #F5F0E6;
+    --text: #1A1A1A;
+    --cta: #C9A227;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Outfit', sans-serif;
+    --radius: 0;
+    --gold: #C9A227;
+    --gold-light: #E8C84A;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--background);
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    line-height: 1.2;
+  }
+
+  img { max-width: 100%; display: block; }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* ===== FADE-IN ANIMATION ===== */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ===== NAVIGATION ===== */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(18,18,18,0.97);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(201,162,39,0.25);
+  }
+
+  .nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+
+  .nav-logo {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+
+  .nav-logo span { color: var(--gold); }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  nav ul li a {
+    color: rgba(255,255,255,0.85);
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  nav ul li a:hover { color: var(--gold); }
+
+  .nav-cta-link a {
+    background: var(--gold);
+    color: var(--primary) !important;
+    padding: 0.5rem 1.1rem;
+    font-weight: 600;
+    transition: background 0.2s !important;
+  }
+
+  .nav-cta-link a:hover { background: var(--gold-light) !important; color: var(--primary) !important; }
+
+  .burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+  }
+
+  .burger span {
+    display: block;
+    width: 26px;
+    height: 2px;
+    background: #fff;
+    transition: all 0.3s;
+  }
+
+  /* Mobile nav */
+  @media (max-width: 767px) {
+    .burger { display: flex; }
+
+    nav ul {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 64px;
+      left: 0;
+      right: 0;
+      background: rgba(18,18,18,0.99);
+      padding: 1.5rem 1.5rem 2rem;
+      gap: 1.2rem;
+      border-bottom: 2px solid var(--gold);
+    }
+
+    nav ul.open { display: flex; }
+
+    nav ul li a { font-size: 1rem; }
+  }
+
+  @media (min-width: 768px) {
+    nav ul { display: flex !important; }
+    .burger { display: none; }
+  }
+
+  /* ===== HERO ===== */
+  #hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background: url('assets/hero.jpg') center center / cover no-repeat;
+    filter: brightness(0.45);
+    z-index: 0;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(18,18,18,0.85) 0%, rgba(18,18,18,0.3) 100%);
+    z-index: 1;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 7rem 1.5rem 4rem;
+    width: 100%;
+  }
+
+  .hero-text {
+    max-width: 600px;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--primary);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.35rem 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-text h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: #fff;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+
+  .hero-text h1 span { color: var(--gold); }
+
+  .hero-text .subheading {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 1rem;
+    font-weight: 400;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 2rem;
+    max-width: 520px;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .cta {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--primary);
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.85rem 2rem;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    text-align: center;
+  }
+
+  .cta:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+  }
+
+  .cta-outline {
+    display: inline-block;
+    background: transparent;
+    color: #fff;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.85rem 2rem;
+    border: 2px solid rgba(255,255,255,0.5);
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .cta-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+  .hero-urgency {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: rgba(255,255,255,0.6);
+    font-size: 0.85rem;
+  }
+
+  .hero-urgency::before {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    background: #4CAF50;
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  /* ===== SECTION BASE ===== */
+  section { padding: 5rem 1.5rem; }
+
+  .section-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+  }
+
+  .section-title.light { color: #fff; }
+
+  .divider {
+    width: 48px;
+    height: 3px;
+    background: var(--gold);
+    margin-bottom: 2rem;
+  }
+
+  /* ===== ABOUT ===== */
+  #apropos {
+    background: var(--primary);
+    color: #fff;
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .about-text p {
+    color: rgba(255,255,255,0.8);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-text p:last-child { margin-bottom: 0; }
+
+  .about-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .stat-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(201,162,39,0.2);
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .stat-card .stat-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-card .stat-label {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .stat-card .stat-value {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    color: var(--gold);
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+
+  @media (min-width: 768px) {
+    .about-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  /* ===== FEATURED MENU / PRESTATIONS ===== */
+  #prestations {
+    background: var(--background);
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (min-width: 1024px) {
+    .services-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+
+  .service-card {
+    background: #fff;
+    border: 1px solid rgba(18,18,18,0.08);
+    padding: 2rem 1.5rem;
+    position: relative;
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+
+  .service-card::before,
+  .service-card::after {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-color: var(--gold);
+    border-style: solid;
+  }
+
+  .service-card::before {
+    top: 8px;
+    left: 8px;
+    border-width: 2px 0 0 2px;
+  }
+
+  .service-card::after {
+    bottom: 8px;
+    right: 8px;
+    border-width: 0 2px 2px 0;
+  }
+
+  .service-card:hover {
+    box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+    transform: translateY(-4px);
+  }
+
+  .service-icon {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .service-card h3 {
+    font-size: 1.1rem;
+    color: var(--primary);
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+  }
+
+  .service-card p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.6;
+  }
+
+  /* ===== CUSTOMER REVIEWS ===== */
+  #avis {
+    background: var(--secondary);
+    color: #fff;
+  }
+
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .reviews-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .review-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(201,162,39,0.2);
+    padding: 2rem 1.5rem;
+    position: relative;
+  }
+
+  .review-quote-icon {
+    font-size: 2rem;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+  }
+
+  .review-stars {
+    display: flex;
+    gap: 3px;
+    margin-bottom: 1rem;
+  }
+
+  .star {
+    color: var(--gold);
+    font-size: 1rem;
+  }
+
+  .review-text {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    white-space: pre-line;
+  }
+
+  .review-author {
+    font-weight: 700;
+    color: #fff;
+    font-size: 0.95rem;
+  }
+
+  .review-date {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.45);
+    margin-top: 0.2rem;
+  }
+
+  /* ===== GALLERY ===== */
+  #galerie {
+    background: var(--primary);
+    overflow: hidden;
+  }
+
+  .gallery-intro {
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 2rem;
+    font-size: 1rem;
+  }
+
+  .carousel-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .carousel-track {
+    display: flex;
+    gap: 1rem;
+    transition: transform 0.5s ease;
+  }
+
+  .carousel-slide {
+    flex: 0 0 calc(100% - 1rem);
+    position: relative;
+    overflow: hidden;
+  }
+
+  @media (min-width: 768px) {
+    .carousel-slide { flex: 0 0 calc(50% - 0.5rem); }
+  }
+
+  @media (min-width: 1024px) {
+    .carousel-slide { flex: 0 0 calc(33.333% - 0.67rem); }
+  }
+
+  .carousel-slide img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.85) contrast(1.1);
+    transition: filter 0.3s;
+  }
+
+  .carousel-slide:hover img { filter: brightness(1) contrast(1.1); }
+
+  .carousel-slide .img-frame {
+    position: relative;
+  }
+
+  .carousel-slide .img-frame::before,
+  .carousel-slide .img-frame::after {
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border-color: var(--gold);
+    border-style: solid;
+    z-index: 2;
+  }
+
+  .carousel-slide .img-frame::before {
+    top: 10px;
+    left: 10px;
+    border-width: 2px 0 0 2px;
+  }
+
+  .carousel-slide .img-frame::after {
+    bottom: 10px;
+    right: 10px;
+    border-width: 0 2px 2px 0;
+  }
+
+  .carousel-controls {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    justify-content: center;
+  }
+
+  .carousel-btn {
+    background: var(--gold);
+    color: var(--primary);
+    border: none;
+    width: 44px;
+    height: 44px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    font-weight: 700;
+  }
+
+  .carousel-btn:hover { background: var(--gold-light); }
+
+  /* ===== HOURS & LOCATION ===== */
+  #horaires {
+    background: var(--background);
+  }
+
+  .hours-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-top: 2.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .hours-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  .hours-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .hours-table tr {
+    border-bottom: 1px solid rgba(18,18,18,0.08);
+  }
+
+  .hours-table tr:last-child { border-bottom: none; }
+
+  .hours-table td {
+    padding: 0.75rem 0;
+    font-size: 0.95rem;
+  }
+
+  .hours-table td:first-child {
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--primary);
+    width: 45%;
+  }
+
+  .hours-table td:last-child {
+    color: #555;
+  }
+
+  .hours-table tr.closed td { color: #999; }
+
+  .hours-address {
+    margin-top: 1.5rem;
+    padding: 1.25rem;
+    background: var(--primary);
+    color: #fff;
+  }
+
+  .hours-address p {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 0.5rem;
+  }
+
+  .hours-address a {
+    color: var(--gold);
+    font-weight: 600;
+  }
+
+  .map-container {
+    width: 100%;
+    height: 320px;
+    border: 3px solid var(--gold);
+  }
+
+  .map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+  }
+
+  /* ===== CONTACT FORM ===== */
+  #contact {
+    background: var(--primary);
+    color: #fff;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-top: 2.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .contact-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  .contact-info p {
+    color: rgba(255,255,255,0.75);
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+  }
+
+  .contact-detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .contact-detail-icon {
+    font-size: 1.3rem;
+    color: var(--gold);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .contact-detail-text {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.8);
+  }
+
+  .contact-detail-text strong {
+    display: block;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+  }
+
+  .contact-detail-text a { color: var(--gold); }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .form-group label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+  }
+
+  .form-group input,
+  .form-group textarea {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: #fff;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    padding: 0.85rem 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: var(--gold);
+  }
+
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: rgba(255,255,255,0.35);
+  }
+
+  .form-group textarea { resize: vertical; min-height: 130px; }
+
+  form .cta { width: 100%; font-size: 1rem; padding: 1rem; }
+
+  /* ===== TRUST SIGNALS ===== */
+  #confiance {
+    background: var(--background);
+  }
+
+  .trust-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin-top: 2.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .trust-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  @media (min-width: 1024px) {
+    .trust-grid { grid-template-columns: repeat(5, 1fr); }
+  }
+
+  .trust-item {
+    background: #fff;
+    border: 1px solid rgba(18,18,18,0.08);
+    padding: 1.5rem 1rem;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    transition: box-shadow 0.3s;
+  }
+
+  .trust-item:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  }
+
+  .trust-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--gold);
+  }
+
+  .trust-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .trust-item p {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary);
+    line-height: 1.4;
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: #0A0A0A;
+    color: rgba(255,255,255,0.6);
+    padding: 3rem 1.5rem 2rem;
+  }
+
+  .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  @media (min-width: 768px) {
+    .footer-top { grid-template-columns: 2fr 1fr 1fr; }
+  }
+
+  .footer-brand .footer-logo {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  .footer-brand .footer-logo span { color: var(--gold); }
+
+  .footer-brand p {
+    font-size: 0.875rem;
+    line-height: 1.7;
+    max-width: 300px;
+  }
+
+  .footer-col h4 {
+    font-family: var(--font-heading);
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  .footer-col ul { list-style: none; }
+
+  .footer-col ul li {
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  .footer-col ul li a {
+    color: rgba(255,255,255,0.6);
+    transition: color 0.2s;
+  }
+
+  .footer-col ul li a:hover { color: var(--gold); }
+
+  .footer-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.8rem;
+  }
+
+  .footer-bottom a { color: var(--gold); }
+
+  /* ===== URGENCY BAR ===== */
+  .urgency-bar {
+    background: var(--gold);
+    color: var(--primary);
+    text-align: center;
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    position: relative;
+    z-index: 999;
+  }
+
+  .urgency-bar a {
+    color: var(--primary);
+    text-decoration: underline;
+    margin-left: 0.5rem;
+  }
+
+  /* ===== SCROLL TOP ===== */
+  #scrollTop {
+    position: fixed;
+    bottom: 2rem;
+    right: 1.5rem;
+    background: var(--gold);
+    color: var(--primary);
+    border: none;
+    width: 44px;
+    height: 44px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 900;
+    font-weight: 700;
+    transition: background 0.2s;
+  }
+
+  #scrollTop.show { display: flex; }
+  #scrollTop:hover { background: var(--gold-light); }
+
+/* ── GARDE-FOU NAV (post-traitement deterministe, pas le LLM) ────────────────
+   Le modele produit typiquement `nav ul.open { flex-direction:column }` SANS
+   media query. Sa specificite (0,2,1) bat la regle desktop `nav ul` (0,0,2)
+   quand celle-ci n'a pas !important sur flex-direction : au retour en desktop
+   apres ouverture du burger, le menu reste empile en colonne (menu casse).
+   Cette regle force l'etat desktop quel que soit l'etat de .open. */
+@media (min-width: 768px) {
+  nav ul, nav ul.open, nav.open ul, nav ul[data-open="true"] {
+    flex-direction: row !important;
+    position: static !important;
+    display: flex !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    width: auto !important;
+  }
+  .burger, button.burger, .nav-toggle, #burger, .burger-menu { display: none !important; }
+}
+</style>
+</head>
+<body>
+
+<!-- URGENCY BAR -->
+<div class="urgency-bar" role="banner" aria-label="Intervention d'urgence">
+  Intervention d'urgence 24h/24 et 7j/7 à Mimizan et alentours.
+  <a href="tel:+33675441829">Appelez le +33 6 75 44 18 29</a>
+</div>
+
+<!-- NAVIGATION -->
+<nav aria-label="Navigation principale">
+  <div class="nav-inner">
+    <div class="nav-logo">Loubeyres <span>Mathis</span></div>
+    <button class="burger" id="burgerBtn" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul id="navMenu" role="menubar">
+      <li role="none"><a href="#apropos" role="menuitem">À propos</a></li>
+      <li role="none"><a href="#prestations" role="menuitem">Prestations</a></li>
+      <li role="none"><a href="#avis" role="menuitem">Avis</a></li>
+      <li role="none"><a href="#galerie" role="menuitem">Galerie</a></li>
+      <li role="none"><a href="#horaires" role="menuitem">Horaires</a></li>
+      <li role="none" class="nav-cta-link"><a href="tel:+33675441829" role="menuitem" class="cta" aria-label="Appeler maintenant">Appeler</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero" aria-label="Présentation">
+  <div class="hero-bg" role="img" aria-label="Artisan plombier au travail"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-badge">Plombier &amp; Chauffagiste — Mimizan (40200)</div>
+      <h1>Loubeyres Mathis, votre <span>plombier</span> à Mimizan</h1>
+      <p class="subheading">Interventions de plomberie et chauffage à Mimizan et alentours.</p>
+      <p>Artisan plombier à Mimizan, Mathis Loubeyres vous accompagne pour vos travaux de plomberie, de rénovation et de chauffage. Réactif, disponible et à l'écoute, il assure un suivi rigoureux de chaque chantier.</p>
+      <div class="hero-actions">
+        <a href="tel:+33675441829" class="cta" aria-label="Appeler maintenant">Appeler maintenant</a>
+        <a href="#contact" class="cta-outline" aria-label="Demander un devis">Demander un devis</a>
+      </div>
+      <div class="hero-urgency">Disponible 24h/24 et 7j/7 pour les urgences</div>
+    </div>
+  </div>
+</section>
+
+<!-- À PROPOS -->
+<section id="apropos" aria-label="À propos de Loubeyres Mathis">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-text fade-in">
+        <p class="section-label">À propos</p>
+        <h2 class="section-title light">À propos de Loubeyres Mathis</h2>
+        <div class="divider"></div>
+        <p>Loubeyres Mathis est un artisan plombier installé à Mimizan, dans les Landes. Il intervient pour la recherche et la réparation de fuites, les travaux de plomberie et de chauffage, ainsi que dans le cadre de rénovations complètes. Ses clients soulignent sa réactivité, le respect des délais et une communication claire tout au long des travaux.</p>
+        <p>Basé au 34 Av. des Trois Collines, 40200 Mimizan, Mathis intervient sur Mimizan et l'ensemble du secteur des Landes pour tous vos besoins en plomberie et chauffage.</p>
+        <a href="tel:+33675441829" class="cta" aria-label="Appeler Loubeyres Mathis" style="margin-top:1.5rem;">Appeler maintenant</a>
+      </div>
+      <div class="about-stats fade-in">
+        <div class="stat-card">
+          <div class="stat-icon">🔧</div>
+          <div class="stat-value">24h/24</div>
+          <div class="stat-label">Urgences</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">📍</div>
+          <div class="stat-value">Mimizan</div>
+          <div class="stat-label">Landes (40)</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">⭐</div>
+          <div class="stat-value">5/5</div>
+          <div class="stat-label">Avis clients</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">✅</div>
+          <div class="stat-value">Gratuit</div>
+          <div class="stat-label">Devis sans engagement</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRESTATIONS -->
+<section id="prestations" aria-label="Nos prestations">
+  <div class="section-inner">
+    <div class="fade-in">
+      <p class="section-label">Ce que nous faisons</p>
+      <h2 class="section-title">Nos prestations</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="services-grid">
+      <div class="service-card fade-in">
+        <div class="service-icon">💧</div>
+        <h3>Recherche et réparation de fuites</h3>
+        <p>Détection de fuites d'eau et mise en place de solutions pour limiter les dégâts.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">🔩</div>
+        <h3>Travaux de plomberie</h3>
+        <p>Interventions de plomberie pour l'entretien, la réparation et l'installation.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">🔥</div>
+        <h3>Chauffage</h3>
+        <p>Prestations en chauffage pour votre logement.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">🏠</div>
+        <h3>Rénovation complète</h3>
+        <p>Accompagnement sur les chantiers de rénovation impliquant la plomberie et le chauffage.</p>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:2.5rem;" class="fade-in">
+      <a href="#contact" class="cta" aria-label="Demander un devis gratuit">Demander un devis gratuit</a>
+    </div>
+  </div>
+</section>
+
+<!-- AVIS CLIENTS -->
+<section id="avis" aria-label="Avis clients">
+  <div class="section-inner">
+    <div class="fade-in">
+      <p class="section-label" style="color:var(--gold);">Ce que disent nos clients</p>
+      <h2 class="section-title light">Avis clients</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="reviews-grid">
+
+      <div class="review-card fade-in">
+        <div class="review-quote-icon" aria-hidden="true">❝</div>
+        <div class="review-stars" aria-label="5 étoiles sur 5">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <p class="review-text">Nous avons fait appel à Mathis dans le cadre d'une rénovation complète et nous ne pouvons que le recommander les yeux fermés !
+C'est un artisan extrêmement réactif, disponible et très arrangeant sur les délais, ce qui a grandement facilité l'avancée de notre chantier. Le rapport qualité-prix est tout simplement excellent.
+Le gros point fort : sa communication irréprochable. Ne pouvant pas être sur place durant les travaux, Mathis nous a tenus informés en temps réel avec des appels réguliers et des photos pour expliquer chaque étape. C'est tellement rassurant de tomber sur quelqu'un d'aussi pro et investi.
+En plus d'être un super technicien, Mathis est une personne très gentille et sympathique. Nous ferons appel à lui à nouveau sans aucune hésitation pour nos futurs besoins en plomberie ou chauffage. Merci encore !</p>
+        <div class="review-author">Laura Ramirez</div>
+        <div class="review-date">il y a 5 mois</div>
+      </div>
+
+      <div class="review-card fade-in">
+        <div class="review-quote-icon" aria-hidden="true">❝</div>
+        <div class="review-stars" aria-label="5 étoiles sur 5">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <p class="review-text">Excellente intervention de la part de Mathys Loubeyres Plombier à Mimizan.
+Suite à une grosse fuite d'eau Insoupçonnable et révélée lors d'une facture exorbitante : Mathis Loubeyres est intervenu rapidement et a surtout détecté la fuite. Il a mis en place une solution transitoire de dérivation pour arrêter les dégâts. Il a géré les travaux avec efficacité, sérieux et professionnalisme.
+Je le remercie et je le recommande sans hésitation.</p>
+        <div class="review-author">BARRET ISA</div>
+        <div class="review-date">il y a un an</div>
+      </div>
+
+      <div class="review-card fade-in">
+        <div class="review-quote-icon" aria-hidden="true">❝</div>
+        <div class="review-stars" aria-label="5 étoiles sur 5">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <p class="review-text">Excellent jeune artisan ! Je recommande vivement. Très bonne communication, délais tenus. Je n'hésiterai pas à refaire appel à lui !</p>
+        <div class="review-author">Anouk Douet</div>
+        <div class="review-date">il y a 5 mois</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- GALERIE -->
+<section id="galerie" aria-label="Galerie de réalisations">
+  <div class="section-inner">
+    <div class="fade-in">
+      <p class="section-label" style="color:var(--gold);">Nos réalisations</p>
+      <h2 class="section-title light">Galerie</h2>
+      <div class="divider"></div>
+      <p class="gallery-intro">Découvrez prochainement des photos de nos réalisations à Mimizan et dans les environs.</p>
+    </div>
+    <div class="carousel-wrapper fade-in" aria-label="Carrousel de photos">
+      <div class="carousel-track" id="carouselTrack">
+        <div class="carousel-slide">
+          <div class="img-frame">
+            <img src="assets/gallery-1.jpg" alt="Réalisation plomberie Mimizan" loading="lazy">
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <div class="img-frame">
+            <img src="assets/gallery-2.jpg" alt="Travaux de plomberie et chauffage" loading="lazy">
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <div class="img-frame">
+            <img src="assets/hero.jpg" alt="Artisan plombier Loubeyres Mathis" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <div class="carousel-controls">
+        <button class="carousel-btn" id="prevBtn" aria-label="Image précédente">&#8592;</button>
+        <button class="carousel-btn" id="nextBtn" aria-label="Image suivante">&#8594;</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HORAIRES & LOCALISATION -->
+<section id="horaires" aria-label="Horaires et localisation">
+  <div class="section-inner">
+    <div class="fade-in">
+      <p class="section-label">Où nous trouver</p>
+      <h2 class="section-title">Horaires et localisation</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="hours-grid">
+      <div class="fade-in">
+        <table class="hours-table" aria-label="Horaires d'ouverture">
+          <tbody>
+            <tr>
+              <td>Lundi</td>
+              <td>14:00 – 18:00</td>
+            </tr>
+            <tr>
+              <td>Mardi</td>
+              <td>08:30 – 18:00</td>
+            </tr>
+            <tr>
+              <td>Mercredi</td>
+              <td>08:30 – 18:00</td>
+            </tr>
+            <tr>
+              <td>Jeudi</td>
+              <td>08:30 – 18:00</td>
+            </tr>
+            <tr>
+              <td>Vendredi</td>
+              <td>08:30 – 18:00</td>
+            </tr>
+            <tr>
+              <td>Samedi</td>
+              <td>09:00 – 12:00</td>
+            </tr>
+            <tr class="closed">
+              <td>Dimanche</td>
+              <td>Fermé</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="hours-address">
+          <p><strong style="color:#fff;">Adresse</strong></p>
+          <p>34 Av. des Trois Collines, 40200 Mimizan, France</p>
+          <p style="margin-top:0.75rem;"><strong style="color:#fff;">Téléphone</strong></p>
+          <p><a href="tel:+33675441829">+33 6 75 44 18 29</a></p>
+          <p style="margin-top:0.75rem;"><strong style="color:#fff;">Email</strong></p>
+          <p><a href="mailto:mathis.loubeyres@gmail.com">mathis.loubeyres@gmail.com</a></p>
+        </div>
+      </div>
+      <div class="fade-in">
+        <div class="map-container" aria-label="Carte de localisation">
+          <iframe
+            src="https://www.google.com/maps?q=34+Av.+des+Trois+Collines,+40200+Mimizan,+France&output=embed"
+            title="Localisation de Loubeyres Mathis à Mimizan"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        <div style="margin-top:1.5rem; text-align:center;">
+          <a href="tel:+33675441829" class="cta" aria-label="Appeler pour une intervention">Appeler pour une intervention</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORMULAIRE DE CONTACT -->
+<section id="contact" aria-label="Formulaire de contact">
+  <div class="section-inner">
+    <div class="contact-grid">
+      <div class="contact-info fade-in">
+        <p class="section-label" style="color:var(--gold);">Nous écrire</p>
+        <h2 class="section-title light">Contactez-nous</h2>
+        <div class="divider"></div>
+        <p>Pour toute demande de devis ou d'intervention, contactez Loubeyres Mathis par téléphone ou par email.</p>
+        <div class="contact-detail">
+          <span class="contact-detail-icon" aria-hidden="true">📞</span>
+          <div class="contact-detail-text">
+            <strong>Téléphone</strong>
+            <a href="tel:+33675441829">+33 6 75 44 18 29</a>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <span class="contact-detail-icon" aria-hidden="true">✉️</span>
+          <div class="contact-detail-text">
+            <strong>Email</strong>
+            <a href="mailto:mathis.loubeyres@gmail.com">mathis.loubeyres@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <span class="contact-detail-icon" aria-hidden="true">📍</span>
+          <div class="contact-detail-text">
+            <strong>Adresse</strong>
+            34 Av. des Trois Collines, 40200 Mimizan, France
+          </div>
+        </div>
+        <div style="margin-top:2rem;">
+          <a href="tel:+33675441829" class="cta" aria-label="Appeler maintenant">Appeler maintenant</a>
+        </div>
+      </div>
+      <div class="fade-in">
+        <form action="https://checkout.kamkod.com/contact" method="POST" aria-label="Formulaire de demande de devis">
+          <input type="hidden" name="lead_id" value="ChIJa6eez0aIUw0RwIncMQEmiLM">
+          <div class="form-group">
+            <label for="name">Votre nom</label>
+            <input type="text" id="name" name="name" placeholder="Jean Dupont" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="email">Votre email</label>
+            <input type="email" id="email" name="email" placeholder="jean.dupont@email.com" required autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="message">Votre message</label>
+            <textarea id="message" name="message" placeholder="Décrivez votre besoin (fuite, chauffage, rénovation, urgence...)." required></textarea>
+          </div>
+          <button type="submit" class="cta" aria-label="Envoyer ma demande de devis">Envoyer ma demande</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST SIGNALS -->
+<section id="confiance" aria-label="Pourquoi nous faire confiance">
+  <div class="section-inner">
+    <div class="fade-in" style="text-align:center;">
+      <p class="section-label">Nos engagements</p>
+      <h2 class="section-title">Pourquoi nous faire confiance</h2>
+      <div class="divider" style="margin:0 auto 2rem;"></div>
+    </div>
+    <div class="trust-grid">
+      <div class="trust-item fade-in">
+        <div class="trust-icon" aria-hidden="true">📍</div>
+        <p>Artisan plombier local à Mimizan</p>
+      </div>
+      <div class="trust-item fade-in">
+        <div class="trust-icon" aria-hidden="true">⚡</div>
+        <p>Réactif et disponible</p>
+      </div>
+      <div class="trust-item fade-in">
+        <div class="trust-icon" aria-hidden="true">🕐</div>
+        <p>Respect des délais</p>
+      </div>
+      <div class="trust-item fade-in">
+        <div class="trust-icon" aria-hidden="true">💬</div>
+        <p>Communication claire et suivi des travaux</p>
+      </div>
+      <div class="trust-item fade-in">
+        <div class="trust-icon" aria-hidden="true">👍</div>
+        <p>Recommandé par ses clients</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer aria-label="Pied de page">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">Loubeyres <span>Mathis</span></div>
+        <p>Artisan plombier à Mimizan, dans les Landes. Interventions de plomberie, chauffage et rénovation. Réactif, professionnel et à votre écoute.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#apropos">À propos</a></li>
+          <li><a href="#prestations">Prestations</a></li>
+          <li><a href="#avis">Avis clients</a></li>
+          <li><a href="#galerie">Galerie</a></li>
+          <li><a href="#horaires">Horaires</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+33675441829">+33 6 75 44 18 29</a></li>
+          <li><a href="mailto:mathis.loubeyres@gmail.com">mathis.loubeyres@gmail.com</a></li>
+          <li>34 Av. des Trois Collines</li>
+          <li>40200 Mimizan, France</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Loubeyres Mathis — Plombier à Mimizan. 34 Av. des Trois Collines, 40200 Mimizan, France. Téléphone : +33 6 75 44 18 29. Email : mathis.loubeyres@gmail.com.</p>
+      <p>Artisan plombier Landes — Mimizan (40200)</p>
+    </div>
+  </div>
+</footer>
+
+<!-- SCROLL TOP -->
+<button id="scrollTop" aria-label="Retour en haut de page">↑</button>
+
+<script>
+  // ===== BURGER MENU =====
+  const burgerBtn = document.getElementById('burgerBtn');
+  const navMenu = document.getElementById('navMenu');
+
+  burgerBtn.addEventListener('click', function() {
+    const isOpen = navMenu.classList.toggle('open');
+    burgerBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+
+  navMenu.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      navMenu.classList.remove('open');
+      burgerBtn.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // ===== FADE-IN INTERSECTION OBSERVER =====
+  const fadeEls = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  fadeEls.forEach(function(el) { observer.observe(el); });
+
+  // ===== CAROUSEL =====
+  const track = document.getElementById('carouselTrack');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  let currentIndex = 0;
+
+  function getSlidesPerView() {
+    if (window.innerWidth >= 1024) return 3;
+    if (window.innerWidth >= 768) return 2;
+    return 1;
+  }
+
+  function getTotalSlides() {
+    return track.children.length;
+  }
+
+  function updateCarousel() {
+    const slidesPerView = getSlidesPerView();
+    const maxIndex = Math.max(0, getTotalSlides() - slidesPerView);
+    if (currentIndex > maxIndex) currentIndex = maxIndex;
+    const slideWidth = track.children[0].offsetWidth + 16;
+    track.style.transform = 'translateX(-' + (currentIndex * slideWidth) + 'px)';
+  }
+
+  prevBtn.addEventListener('click', function() {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateCarousel();
+    }
+  });
+
+  nextBtn.addEventListener('click', function() {
+    const slidesPerView = getSlidesPerView();
+    const maxIndex = Math.max(0, getTotalSlides() - slidesPerView);
+    if (currentIndex < maxIndex) {
+      currentIndex++;
+      updateCarousel();
+    }
+  });
+
+  window.addEventListener('resize', function() {
+    updateCarousel();
+  });
+
+  // ===== SCROLL TOP =====
+  const scrollTopBtn = document.getElementById('scrollTop');
+
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 400) {
+      scrollTopBtn.classList.add('show');
+    } else {
+      scrollTopBtn.classList.remove('show');
+    }
+  });
+
+  scrollTopBtn.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+<!-- KAMKOD:DEMO_START -->
+<script>
+(function(){
+  var URL = 'https://checkout.kamkod.com/d/ChIJa6eez0aIUw0RwIncMQEmiLM';
+  document.addEventListener('click', function(e){
+    var el = e.target.closest('a, button, [role="button"]');
+    if(!el || el.closest('form')) return;               /* formulaire -> endpoint contact */
+    if(el.classList.contains('cta')) { e.preventDefault(); window.location.href = URL; return; }
+    if(el.closest('header nav, nav')) return;           /* navigation interne de la démo */
+    var a = e.target.closest('a');
+    if(!a) return;                                      /* bouton seul hors nav: on laisse */
+    var href = a.getAttribute('href') || '';
+    if(href.charAt(0) === '#') return;                  /* ancres de section */
+    if(/^https?:|^\/\//i.test(href)) return;
+    e.preventDefault(); window.location.href = URL;     /* tel:, mailto:, javascript:… */
+  }, true);
+})();
+</script>
+<div id="kamkod-demo-banner" data-pid="ChIJa6eez0aIUw0RwIncMQEmiLM" data-echeance="1789554620522"
+     style="position:fixed;bottom:0;left:0;right:0;background:#111;color:#fff;z-index:9999;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;box-shadow:0 -2px 14px rgba(0,0,0,.4);">
+  <div style="max-width:920px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:center;">
+    <span style="flex:1;min-width:200px;font-size:13px;opacity:.8;">Aperçu de votre futur site</span>
+    <span id="kk-offre" style="font-size:14px;font-variant-numeric:tabular-nums;">Prix de lancement : <b>49,00 €</b> — encore 47h 59min 59s</span>
+    <a href="https://checkout.kamkod.com/d/ChIJa6eez0aIUw0RwIncMQEmiLM" style="background:#EA580C;color:#fff;padding:10px 20px;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px;white-space:nowrap;">Activer mon site</a>
+  </div>
+</div>
+<script>
+/* COMPTE À REBOURS DE LA BANNIÈRE (demande Alex 11/09) : le prospect passe le plus
+   de temps SUR SON SITE — l'urgence doit être ici, pas seulement sur la page de
+   vente après un clic de plus. Même mécanique que la page : fenêtre 48 h, prix de
+   lancement, et le prix plein annoncé une fois la fenêtre passée.
+   L'échéance est EMBARQUÉE à l'injection (aucune dépendance réseau) puis
+   resynchronisée depuis /api/offre toutes les 2 min (une réinitialisation de
+   fenêtre doit se propager à un site déjà déployé). */
+(function(){
+  var b = document.getElementById('kamkod-demo-banner');
+  if(!b) return;
+  var ach = parseInt(b.getAttribute('data-echeance') || '0', 10);
+  var pid = b.getAttribute('data-pid');
+  var el  = document.getElementById('kk-offre');
+  if(!el) return;
+  var T_LAUNCH = "Prix de lancement : <b>%PRIX%</b> — encore %TEMPS%";
+  var T_OVER   = "Le déploiement est passé à <b>%PRIX%</b>";
+  var PRIX_L   = "49,00 €";
+  var PRIX_O   = "98,00 €";
+  function deux(n){ return (n < 10 ? '0' : '') + n; }
+  function hms(s){
+    var h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60), x = s % 60;
+    return h + 'h ' + deux(m) + 'min ' + deux(x) + 's';
+  }
+  function rendu(){
+    var s = ach ? Math.floor((ach - Date.now()) / 1000) : 0;
+    if(s > 0){
+      el.innerHTML = T_LAUNCH.replace('%TEMPS%', hms(s)).replace('%PRIX%', PRIX_L);
+    } else {
+      el.innerHTML = T_OVER.replace('%PRIX%', PRIX_O);
+    }
+  }
+  rendu();
+  setInterval(rendu, 1000);
+  function sync(){
+    try{
+      fetch('https://checkout.kamkod.com/api/offre/' + pid, {cache:'no-store'})
+        .then(function(r){ return r.json(); })
+        .then(function(d){
+          if(d && d.echeance_ms){ ach = d.echeance_ms; }
+          if(d && d.prix_lancement){ PRIX_L = d.prix_lancement; }
+          if(d && d.prix_apres){ PRIX_O = d.prix_apres; }
+          rendu();
+        })
+        .catch(function(){});
+    }catch(e){}
+  }
+  setTimeout(sync, 5000);
+  setInterval(sync, 120000);
+})();
+</script>
+<script>
+/* KAMKOD-MESURE v1 — page="site" | mesure agrégée : aucun cookie, aucun identifiant. */
+(function(){
+  try{
+    var PID="ChIJa6eez0aIUw0RwIncMQEmiLM", PAGE="site";
+    var URL="https://checkout.kamkod.com/api/comportement/"+PID;
+    var vis=0, lastIn=Date.now(), scrollMax=0, clics=0, cta=0, premier=1, vues={};
+    var mobile=/Mobi|Android|iPhone|iPad/i.test(navigator.userAgent||'');
+    function cache(){ return document.visibilityState==='hidden'; }
+    function temps(){ var n=Date.now(); if(!cache() && lastIn){ vis+=n-lastIn; } lastIn=n; }
+    function majScroll(){
+      var h=Math.max(1,(document.documentElement.scrollHeight||0)-window.innerHeight);
+      var p=Math.round(Math.min(100,((window.pageYOffset||window.scrollY||0)/h)*100));
+      if(p>scrollMax){ scrollMax=p; }
+    }
+    function majSections(){
+      var hs=document.querySelectorAll('h1,h2,h3');
+      for(var i=0;i<hs.length && i<40;i++){
+        var r=hs[i].getBoundingClientRect();
+        if(r.top<window.innerHeight && r.bottom>0){
+          var t=(hs[i].textContent||'').replace(/\s+/g,' ').trim().slice(0,60);
+          if(t){ vues[t]=(vues[t]||0)+1; }
+        }
+      }
+    }
+    function estCta(el){ var a=null,n=el;while(n&&n.tagName!=='A'){n=n.parentNode;}
+      a=n;if(!a||!a.getAttribute)return false;
+      var h=a.getAttribute('href')||'';
+      return h.indexOf('/d/')>-1||h.indexOf('checkout.kamkod.com')>-1; }
+    function envoi(force){
+      try{
+        temps();
+        var secs=Object.keys(vues);
+        if(!force && !secs.length && !vis && !clics && !scrollMax){ return; }
+        var corps=JSON.stringify({v:1, page:PAGE, debut:premier?1:0, temps_ms:Math.round(vis),
+          scroll_max:scrollMax, clics:clics, cta_clics:cta, mobile:mobile, sections:secs});
+        var ok=false;
+        try{
+          if(navigator.sendBeacon){ ok=navigator.sendBeacon(URL, corps); }
+          if(!ok){
+            var x=new XMLHttpRequest();
+            x.open('POST',URL,true);
+            x.setRequestHeader('Content-Type','text/plain;charset=UTF-8');
+            x.send(corps); ok=true;
+          }
+        }catch(e){}
+        if(ok){ premier=0; vis=0; clics=0; cta=0; vues={}; }
+      }catch(e){}
+    }
+    window.addEventListener('scroll',function(){try{majScroll();majSections();}catch(e){}},{passive:true});
+    document.addEventListener('click',function(ev){
+      try{ clics++; if(estCta(ev.target)){ cta++; } }catch(e){}
+    },true);
+    document.addEventListener('visibilitychange',function(){
+      try{ if(cache()){ envoi(false); } else { lastIn=Date.now(); } }catch(e){}
+    });
+    window.addEventListener('pagehide',function(){try{envoi(true);}catch(e){}});
+    setTimeout(function(){try{majScroll();majSections();envoi(false);}catch(e){}},3000);
+    setInterval(function(){try{majSections();envoi(false);}catch(e){}},30000);
+  }catch(e){}
+})();
+</script>
+<!-- KAMKOD:DEMO_END -->
+</body>
+</html>
